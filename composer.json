@@ -1,0 +1,36 @@
+{
+    "name": "radev-n-radoslav/commission-task-skeleton",
+    "description": "Skeleton for recruitment task",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "RadevNRadoslav\\CommissionTask\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RadevNRadoslav\\CommissionTask\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "ext-bcmath": "*",
+        "friendsofphp/php-cs-fixer": "^3.9",
+        "guzzlehttp/guzzle": "7.0",
+        "nesbot/carbon": "^2.59"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
